@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:background="@drawable/maingetin">
+
+    <RelativeLayout
+        android:id="@+id/menu_page_contriller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/menu_all"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:src="@drawable/all"
+            android:scaleType="fitXY"/>
+
+        <!--存放图片的ViewPager-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/menu_ViewPage_Detail"
+            android:layout_width="360dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/menu_all"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:foregroundGravity="center_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/menu_line_galaxy"
+            android:layout_width="360dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/menu_ViewPage_Detail"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:alpha="0.5"
+            android:background="#e8e8e4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--<标题>-->
+            <TextView
+                android:id="@+id/menu_loop_dec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:text="Intrduction"
+                android:textColor="@color/black" />
+
+            <!--<小圆点>-->
+            <LinearLayout
+                android:id="@+id/menu_ll_dots_loop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_gala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Galaxy"
+            android:layout_below="@id/menu_line_galaxy"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_rv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_gala"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/tx_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_rv_1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/Daily"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_rv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_daily"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+<!--    &lt;!&ndash;底部菜单栏（第三方框架）&ndash;&gt;-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/menu_navigation_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@color/white"-->
+<!--        app:itemIconTint="@color/grey"-->
+<!--        app:itemTextColor="@color/black"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:menu="@menu/navigation_menu" />-->
+
+</RelativeLayout>

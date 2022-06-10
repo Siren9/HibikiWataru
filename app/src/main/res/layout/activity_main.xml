@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/main_imgv_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/maingetin" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/main_photo_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_tx_intro"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/main_img_change"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/main_tx_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="100dp"
+            android:text="Welcome"
+            android:textColor="@color/blue"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/main_tx_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="5dp"
+            android:text="Hope U have a pretty journey"
+            android:textColor="@color/blue"
+            android:layout_below="@id/main_tx_welcome"/>
+
+        <EditText
+            android:id="@+id/main_user"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_photo_select"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:hint="User"
+            android:textColorHint="@color/blue" />
+
+        <EditText
+            android:id="@+id/main_password"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_user"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:hint="PassWord"
+            android:textColorHint="@color/blue" />
+
+        <Button
+            android:id="@+id/main_but_next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/main_password"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="30dp"
+            android:alpha="0.6"
+            android:background="@drawable/main_next"
+            android:text=">"
+            android:textColor="@color/blue"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
